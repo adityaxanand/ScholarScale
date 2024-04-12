@@ -72,18 +72,19 @@ number_of_subjects = st.number_input(
 # Input for grades and credits
 grade = np.array([0] * number_of_subjects)
 credit = np.array([0] * number_of_subjects)
+subject_names = ["" for _ in range(number_of_subjects)]
 for i in range(number_of_subjects):
-    st.subheader(f"Subject #{i+1}")
+    subject_names[i] = st.text_input(f"Enter the name of Subject #{i+1}", key=f"subject_{i}")
     cols = st.columns(2)
     grade[i] = grade_to_point[
         cols[0].selectbox(
-            label=f"Grade",
+            label=f"Grade for {subject_names[i]}",
             options=grades,
             key=f"selectbox_{i}",
         )
     ]
     credit[i] = cols[1].number_input(
-        label=f"Credit",
+        label=f"Credit for {subject_names[i]}",
         min_value=1.0,
         max_value=10.0,
         value=4.0,
