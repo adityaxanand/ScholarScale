@@ -2,13 +2,13 @@ import streamlit as st
 import numpy as np
 
 st.set_page_config(
-    page_title="CGPA Calculator",
+    page_title="ScholarScale",
     page_icon="📊",
     layout="centered",
     initial_sidebar_state="auto",
     menu_items={
-        "Get Help": "https://github.com/Siddhesh-Agarwal/CGPA-Calculator/discussions",
-        "Report a bug": "https://github.com/Siddhesh-Agarwal/CGPA-Calculator/issues/new",
+        "Get Help": "https://github.com/adityaxanand/ScholarScale/discussions",
+        "Report a bug": "https://github.com/adityaxanand/ScholarScale/issues/new",
         "About": None,
     },
 )
@@ -16,11 +16,11 @@ st.set_page_config(
 
 grade_to_point = {
     "O": 10,
-    "A+": 9,
+    "E": 9,
     "A": 8,
-    "B+": 7,
-    "B": 6,
-    "C": 5,
+    "B": 7,
+    "C": 6,
+    "D": 5,
 }
 grades = list(grade_to_point.keys())
 
@@ -98,7 +98,7 @@ if st.button("Calculate"):
     )
 
 
-st.markdown("Made with ❤️ by [Siddhesh Agarwal](https://github.com/Siddhesh-Agarwal)")
+st.markdown("Made with ❤️ by [Aditya](https://github.com/adityaxanand)")
 st.write(
     """
     <style>
