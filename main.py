@@ -98,7 +98,7 @@ if st.button("Calculate"):
     )
 
 
-st.markdown("Made with ❤️ by [Aditya](https://github.com/adityaxanand)")
+#st.markdown("Made with ❤️ by [Aditya](https://github.com/adityaxanand)")
 st.write(
     """
     <style>
