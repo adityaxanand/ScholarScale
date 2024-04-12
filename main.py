@@ -37,7 +37,7 @@ def calculate_cgpa(
     return total_grade / total_credit
 
 
-st.title("CGPA Calculator")
+st.title("Scholar Scale")
 
 st.markdown(
     "This is a simple CGPA calculator that calculates your CGPA based on your grades and credits"
