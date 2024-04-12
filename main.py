@@ -115,7 +115,7 @@ st.write(
         .title h1 {
             color: #333;
             text-align: center;
-            padding: 20px 0;
+            padding: 20px 0px;
         }
         /* Style the subheader */
         .subheader h2 {
