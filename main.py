@@ -80,8 +80,6 @@ for i in range(number_of_subjects):
             label=f"Grade",
             options=grades,
             key=f"selectbox_{i}",
-            help=f"Select your grade for Subject #{i+1}",
-            style="cursor: pointer;",  # Change cursor style to pointer
         )
     ]
     credit[i] = cols[1].number_input(
@@ -129,6 +127,10 @@ st.write(
         .streamlit-button.primary-button {
             background-color: #4b4bff;
             color: white;
+        }
+        /* Style the select box options to have a hand cursor */
+        .dropdown-content {
+            cursor: pointer;
         }
     </style>
     """,
