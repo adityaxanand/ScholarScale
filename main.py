@@ -101,7 +101,7 @@ if st.button("Calculate"):
 # Footer
 st.markdown("Made with ❤️ by Aditya")
 st.write(
-    """
+    
     <style>
         footer {
             visibility: hidden;
@@ -129,6 +129,6 @@ st.write(
             color: white;
         }
     </style>
-    """,
+    ,
     unsafe_allow_html=True,
 )
