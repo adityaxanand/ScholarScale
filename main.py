@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 
+# Set the page configuration
 st.set_page_config(
     page_title="ScholarScale",
     page_icon="🎓",
@@ -13,7 +14,7 @@ st.set_page_config(
     },
 )
 
-
+# Define the grade to point mapping
 grade_to_point = {
     "O": 10,
     "E": 9,
@@ -24,27 +25,25 @@ grade_to_point = {
 }
 grades = list(grade_to_point.keys())
 
-
+# Function to calculate CGPA
 def calculate_cgpa(
     grade: np.array,
     credit: np.array,
     previous_cgpa: float = 0,
     previous_credit: float = 0,
 ):
-    # grade = np.array([grade_to_point[g] for g in grade])
     total_credit = credit.sum() + previous_credit
     total_grade = (grade * credit).sum() + previous_cgpa * previous_credit
     return total_grade / total_credit
 
+# Title and description
+st.title("🎓 Scholar Scale")
+st.markdown("A simple and intuitive CGPA calculator.")
 
-st.title("Scholar Scale")
+# Display the CGPA formula
+st.latex(r"CGPA = \frac{\sum_{i=1}^{n} (grade_i \times credit_i)}{\sum_{i=1}^{n} credit_i}")
 
-st.markdown(
-    "This is a simple CGPA calculator that calculates your CGPA based on your grades and credits"
-)
-
-st.latex(r"CGPA = \frac{\sum_{i=1}^{n} (grade_i * credit_i)}{\sum_{i=1}^{n} credit_i}")
-
+# Input for previous CGPA and credit
 cols = st.columns(2)
 previous_cgpa = cols[0].number_input(
     label="Previous CGPA",
@@ -60,6 +59,8 @@ previous_credit = cols[1].number_input(
     value=0.0,
     step=0.5,
 )
+
+# Input for number of subjects
 number_of_subjects = st.number_input(
     label="Number of Subjects",
     help="Enter the number of subjects you are taking this semester",
@@ -68,7 +69,7 @@ number_of_subjects = st.number_input(
     value=5,
 )
 
-
+# Input for grades and credits
 grade = np.array([0] * number_of_subjects)
 credit = np.array([0] * number_of_subjects)
 for i in range(number_of_subjects):
@@ -81,7 +82,6 @@ for i in range(number_of_subjects):
             key=f"selectbox_{i}",
         )
     ]
-
     credit[i] = cols[1].number_input(
         label=f"Credit",
         min_value=1.0,
@@ -91,14 +91,15 @@ for i in range(number_of_subjects):
         key=f"number_input_{i}",
     )
 
+# Calculate button
 if st.button("Calculate"):
     st.info(f"Your semester GPA is {calculate_cgpa(grade, credit):.2f}")
     st.success(
         f"Your Cumulative GPA is {calculate_cgpa(grade, credit, previous_cgpa, previous_credit):.2f}"
     )
 
-
-#st.markdown("Made with ❤️ by [Aditya](https://github.com/adityaxanand)")
+# Footer
+st.markdown("Made with ❤️ by Aditya")
 st.write(
     """
     <style>
