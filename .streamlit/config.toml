@@ -1,5 +1,5 @@
 [theme]
-primaryColor="#3c3c99"           # A slightly darker shade of blue
-backgroundColor="#f5f5ff"         # A softer shade of off-white
-secondaryBackgroundColor="#e6e6f2" # A lighter shade of lavender
-textColor="#2a2a35"               # A darker shade for text for better contrast
+primaryColor="#4b4bff"
+backgroundColor="#fafaff"
+secondaryBackgroundColor="#f0f0f9"
+textColor="#31313f"
