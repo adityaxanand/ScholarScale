@@ -30,7 +30,7 @@ To run this web app locally:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/ScholarScale.git
+git clone https://github.com/adityaxanand/ScholarScale.git
 ```
 
 2. Install the required dependencies:
