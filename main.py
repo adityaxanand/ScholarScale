@@ -106,6 +106,28 @@ st.write(
         footer {
             visibility: hidden;
         }
+        /* Add some styling to the body */
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+        /* Style the title */
+        .title h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Style the subheader */
+        .subheader h2 {
+            color: #666;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        /* Style the calculate button */
+        .streamlit-button.primary-button {
+            background-color: #4b4bff;
+            color: white;
+        }
     </style>
     """,
     unsafe_allow_html=True,
