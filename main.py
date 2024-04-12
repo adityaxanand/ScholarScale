@@ -3,7 +3,7 @@ import numpy as np
 
 st.set_page_config(
     page_title="ScholarScale",
-    page_icon="📊",
+    page_icon="🎓",
     layout="centered",
     initial_sidebar_state="auto",
     menu_items={
