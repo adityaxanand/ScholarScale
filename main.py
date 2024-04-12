@@ -73,7 +73,7 @@ number_of_subjects = st.number_input(
 grade = np.array([0] * number_of_subjects)
 credit = np.array([0] * number_of_subjects)
 for i in range(number_of_subjects):
-    st.subheader(f"Subject #{i+1}")
+    st.subheader(f"Subject {i+1}")
     cols = st.columns(2)
     grade[i] = grade_to_point[
         cols[0].selectbox(
