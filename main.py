@@ -99,9 +99,9 @@ if st.button("Calculate"):
     )
 
 # Footer
-st.markdown("Made with ❤️ by Aditya")
+#st.markdown("Made with ❤️ by Aditya")
 st.write(
-    
+    """
     <style>
         footer {
             visibility: hidden;
@@ -115,7 +115,7 @@ st.write(
         .title h1 {
             color: #333;
             text-align: center;
-            padding: 20px 0px;
+            padding: 20px 0;
         }
         /* Style the subheader */
         .subheader h2 {
@@ -129,6 +129,6 @@ st.write(
             color: white;
         }
     </style>
-    ,
+    """,
     unsafe_allow_html=True,
 )
